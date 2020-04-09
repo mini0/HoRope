@@ -191,6 +191,7 @@ class HoRope(plugins.ObjectData):
         root[c4d.NULLOBJECT_RADIUS] = op[c4d.HOROPE_RAD] * 3
         root.InsertTag(c4d.BaseTag(180000102))
         root.GetFirstTag()[c4d.RIGID_BODY_DYNAMIC] = 0
+        root.GetFirstTag()[c4d.RIGID_BODY_HIERARCHY] = 0
         root.SetAbsPos(poslist[0])
         root.InsertUnderLast(controls)
 
